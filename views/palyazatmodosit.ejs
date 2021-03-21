@@ -1,0 +1,96 @@
+<%-include('header') %>
+<%-include('menu') %>
+<h2>Pályázat módosítása</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+            <form>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="nev" class="col-form-label">Pályázó neve</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="nev" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="neptun" class="col-form-label">Neptun kód</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="neptun" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="tel" class="col-form-label">Telefonszám</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="tel" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="email" class="col-form-label">Email cím</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="email" id="email" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+        </div>
+    </div>
+</div>
+<h3>Dokumentumok</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+            <form>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="egyhaz" class="col-form-label">Egyház papír</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="egyhaz" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="lakcim" class="col-form-label">Lakcím nyilatkozat</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="lakcim" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="eltarto" class="col-form-label">Eltartó nav</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="eltarto" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-right">
+                    <div class="col-auto">
+                        <label for="egyeb" class="col-form-label">Egy nyilatkozatok</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="egyeb" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <a href="/" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i>Mentés</a>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+        </div>
+    </div>
+</div>
+
+<%-include('footer') %>

@@ -21,35 +21,35 @@ module.exports = function (app) {
 
     app.get('/',
         authMW(objectRepository),
-        renderMW(objectRepository,'index.html')
+        renderMW(objectRepository,'index')
     );
     app.use('/login',
         getbiraloMW(objectRepository),
         checkpswMW(objectRepository),
-        renderMW(objectRepository, 'login.html')
+        renderMW(objectRepository, 'login')
     );
     app.use('/sendpw/:biraloid',
         getbiraloMW(objectRepository),
         sendmepwMW(objectRepository),
-        renderMW(objectRepository, 'login.html')
+        renderMW(objectRepository, 'login')
     );
     app.get('/biralok',
         authMW(objectRepository),
         getbiralokMW(objectRepository),
-        renderMW(objectRepository, 'referens.html')
+        renderMW(objectRepository, 'referens')
     );
     app.use('/biralo/new',
         authMW(objectRepository),
         savebiraloMW(objectRepository),
-        renderMW(objectRepository, 'biralomodosit.html')
+        renderMW(objectRepository, 'biralomodosit')
     );
-    app.use('/biralo/edit/:biraloid',
+    app.use('/biralo/:biraloid/edit',
         authMW(objectRepository),
         getbiraloMW(objectRepository),
         savebiraloMW(objectRepository),
-        renderMW(objectRepository, 'biralomodosit.html')
+        renderMW(objectRepository, 'biralomodosit')
     );
-    app.get('/biralo/delete/:biraloid',
+    app.get('/biralo/:biraloid/delete',
         authMW(objectRepository),
         savebiraloMW(objectRepository),
         deletebiraloMW(objectRepository)
@@ -57,18 +57,18 @@ module.exports = function (app) {
     app.get('/palyazatok',
         authMW(objectRepository),
         getpalyazatokMW(objectRepository),
-        renderMW(objectRepository, 'index.html')
+        renderMW(objectRepository, 'index')
     );
     app.use('/palyazat/new',
         authMW(objectRepository),
         savepalyazatMW(objectRepository),
-        renderMW(objectRepository, 'ujpalyazat.html')
+        renderMW(objectRepository, 'palyazatmodosit')
     );
     app.use('/palyazat/:palyazatid/edit',
         authMW(objectRepository),
         getpalyazatMW(),
         getpalyazatokMW(objectRepository),
-        renderMW(objectRepository, 'palyazatmodositas.html')
+        renderMW(objectRepository, 'palyazatmodosit')
     );
     app.get('/palyazat/:palyazatid/delete',
         authMW(objectRepository),
@@ -78,11 +78,11 @@ module.exports = function (app) {
     app.get('/logout',
         authMW(objectRepository),
         logoutMW(objectRepository),
-        renderMW(objectRepository, 'profil.html')
+        renderMW(objectRepository, 'profil')
     )
     app.get('/profil/:biraloid',
         authMW(objectRepository),
         getbiraloMW(objectRepository),
-        renderMW(objectRepository, 'profil.html')
+        renderMW(objectRepository, 'profil')
     )
 };

@@ -1,0 +1,51 @@
+<%-include('header') %>
+<%-include('menu') %>
+<h2>Profil módosítása</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+            <form>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="nev" class="col-form-label">Név:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="nev" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="neptun" class="col-form-label">Neptun kód:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="neptun" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="tel" class="col-form-label">Telefonszám:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="tel" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="email" class="col-form-label">Email cím:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="email" id="email" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                    <a href="/profil/:biraloid" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i>Mentés</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+        </div>
+    </div>
+</div>
+
+<%-include('footer') %>
