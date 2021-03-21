@@ -15,21 +15,35 @@
                         Neptun
                     </th>
                     <th>
-                        &nbsp;
+                        Telefonszám
+                    </th>
+                    <th>
+                        Email cím
+                    </th>
+                    <th>
+                        &nbsp
                     </th>
                 </tr>
+                <% biralok.forEach(function(egybiralo){ %>
                 <tr>
                     <td>
-                        Kiss Béla
+                        <%=egybiralo.nev%>
                     </td>
                     <td>
-                        K1R4LY
+                        <%=egybiralo.neptun%>
                     </td>
                     <td>
-                        <a href="/biralo/:biraloid/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a>
-                        <a href="/biralo/:biraloid/delete" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a>
+                        <%=egybiralo.telszam%>
+                    </td>
+                    <td>
+                        <%=egybiralo.email%>
+                    </td>
+                    <td>
+                        <a href="/biralo/<%=egybiralo._biraloid%>/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a>
+                        <a href="/biralo/<%=egybiralo._biraloid%>/delete" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a>
                     </td>
                 </tr>
+                <% }); %>
             </table>
         </div>
     </div>
