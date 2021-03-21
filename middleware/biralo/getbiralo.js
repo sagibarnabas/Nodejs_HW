@@ -6,7 +6,7 @@ module.exports = function (objectrepository) {
     return function (req, res, next) {
         res.locals.biralo=[
             {
-                _biraloid:'1',
+                _biraloid:'3',
                 nev: 'Kis Bela',
                 neptun:'HUBX7D',
                 telszam:'0630',
