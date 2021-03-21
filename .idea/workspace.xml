@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7dfcf72f-1d94-4d40-a4db-985fe85c02fc" name="Default Changelist" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="9691721f-1514-48bb-b700-c53dde72bf1b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,14 +15,10 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectId" id="1pqIWTgIrzyQKaDg7MdTyok4GtP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1pyoD1viH1MNAzrNmnlgwOqEKgF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,88 +28,46 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/node_modules" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sagib\Documents\Programozás\JS_node\Projekt\middleware\auth" />
+    </key>
+  </component>
   <component name="RunManager" selected="Node.js.index.js">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Projekt/static/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="ketto.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Projekt/static/ketto.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="outside.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/routes/outside.js" working-dir="$PROJECT_DIR$/routes">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.js" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.ketto.html" />
+        <item itemvalue="Node.js.outside.js" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7dfcf72f-1d94-4d40-a4db-985fe85c02fc" name="Default Changelist" comment="" />
-      <created>1615904225099</created>
+      <changelist id="9691721f-1514-48bb-b700-c53dde72bf1b" name="Default Changelist" comment="" />
+      <created>1616164568222</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1615904225099</updated>
-      <workItem from="1615904226459" duration="8453000" />
-      <workItem from="1615928585766" duration="3405000" />
-      <workItem from="1615963267761" duration="7500000" />
-      <workItem from="1616002218472" duration="99000" />
-      <workItem from="1616009590294" duration="601000" />
-      <workItem from="1616316722720" duration="24000" />
-      <workItem from="1616316781518" duration="37000" />
-      <workItem from="1616319004557" duration="9000" />
-      <workItem from="1616319020614" duration="18000" />
-      <workItem from="1616319045089" duration="30000" />
-      <workItem from="1616319321638" duration="644000" />
+      <updated>1616164568222</updated>
+      <workItem from="1616164569440" duration="7769000" />
+      <workItem from="1616274141636" duration="51000" />
+      <workItem from="1616275694411" duration="178000" />
+      <workItem from="1616275927510" duration="249000" />
+      <workItem from="1616299632296" duration="209000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1616319503908</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1616319503908</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial commit">
-      <created>1616319949017</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1616319949017</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
