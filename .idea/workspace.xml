@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dfcf72f-1d94-4d40-a4db-985fe85c02fc" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projekt_3.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pqIWTgIrzyQKaDg7MdTyok4GtP" />
@@ -78,7 +76,7 @@
       <workItem from="1616319004557" duration="9000" />
       <workItem from="1616319020614" duration="18000" />
       <workItem from="1616319045089" duration="30000" />
-      <workItem from="1616319321638" duration="588000" />
+      <workItem from="1616319321638" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1616319503908</created>
@@ -87,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616319503908</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1616319949017</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616319949017</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
