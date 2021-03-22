@@ -3,6 +3,7 @@ var app = express();
 
 app.set('view engine','ejs');
 app.use(express.static('static'));
+console.log("helo");
 require('./routes/outside')(app);
 var server = app.listen(3000, function () {
     console.log("On: 3000");
