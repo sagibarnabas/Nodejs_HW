@@ -4,7 +4,7 @@
 module.exports = function (objectrepository) {
 
     return function (req, res, next) {
-        return next();
+        console.log("Elkuldtem a jelszot!");
+        return res.redirect('/');
     };
-
 };

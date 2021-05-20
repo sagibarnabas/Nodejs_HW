@@ -1,44 +1,44 @@
 <%-include('header') %>
 <%-include('menu') %>
-<h2>Pályázat módosítása</h2>
+<h2>Pályázat <%if(typeof palyazat==='undefined'){%>létrehozása<%}else{%>módosítása<%}%></h2>
 
+<form method="POST">
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
-            <form>
+
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
                         <label for="nev" class="col-form-label">Pályázó neve</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="nev" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="nev" name= "nev" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.nev %>">
                     </div>
                 </div>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="neptun" class="col-form-label">Neptun kód</label>
+                        <label for="email" class="col-form-label">Email</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="neptun" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="email" name= "email" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.email %>">
                     </div>
                 </div>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="tel" class="col-form-label">Telefonszám</label>
+                        <label for="neptun" class="col-form-label">Neptun</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="tel" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="neptun" name= "neptun" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.neptun %>">
                     </div>
                 </div>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="email" class="col-form-label">Email cím</label>
+                        <label for="telefon" class="col-form-label">Telefonszam</label>
                     </div>
                     <div class="col-auto">
-                        <input type="email" id="email" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="telefon" name= "telefon" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.telefon %>">
                     </div>
                 </div>
-            </form>
         </div>
         <div class="col-lg-4 col-md-6 col-12">
         </div>
@@ -46,45 +46,53 @@
         </div>
     </div>
 </div>
-<h3>Dokumentumok</h3>
+<h3>Fontos adatok </h3>
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
-            <form>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="egyhaz" class="col-form-label">Egyház papír</label>
+                        <label for="pontszam" class="col-form-label">Pontszam</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="egyhaz" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="pontszam" name= "pontszam" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.pontszam %>">
                     </div>
                 </div>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="lakcim" class="col-form-label">Lakcím nyilatkozat</label>
+                        <label for="mirepalyazik" class="col-form-label">Mire palyazik</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="lakcim" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="mirepalyazik" name= "mirepalyazik" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.mirepalyazik %>">
                     </div>
                 </div>
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="eltarto" class="col-form-label">Eltartó nav</label>
+                        <label for="statusz" class="col-form-label">Palyazat statusza</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="eltarto" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="statusz" name= "statusz" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.statusz %>">
                     </div>
                 </div>
                 <div class="row g-3 align-items-right">
                     <div class="col-auto">
-                        <label for="egyeb" class="col-form-label">Egy nyilatkozatok</label>
+                        <label for="kat" class="col-form-label">Kategoria</label>
                     </div>
                     <div class="col-auto">
-                        <input type="text" id="egyeb" class="form-control" aria-describedby="passwordHelpInline">
+                        <input type="text" id="kat" name= "kat" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.kat %>">
                     </div>
                 </div>
-                <a href="/" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i>Mentés</a>
-            </form>
+                <div class="row g-3 align-items-right">
+                    <div class="col-auto">
+                        <label for="hianyossagok" class="col-form-label">Hianyossagok</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="hianyossagok" name= "hianyossagok" class="form-control" value="<%= (typeof palyazat === 'undefined') ? '' : palyazat.hianyossagok %>">
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Mentés"/>
+                <a class="btn btn-link" href="/">Mégsem</a>
+
         </div>
         <div class="col-lg-4 col-md-6 col-12">
         </div>
@@ -92,5 +100,6 @@
         </div>
     </div>
 </div>
+</form>
 
 <%-include('footer') %>

@@ -6,7 +6,7 @@ const biralo = db.model('biralo', {
     email: String,
     neptun: String,
     telefon: Number,
-    referens: Boolean
+    referens: String
 });
 
 module.exports = biralo;

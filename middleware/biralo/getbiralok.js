@@ -1,24 +1,20 @@
 /**
- * Kilistázza a bírálókat /
+ * Kilistázza a biralokat /
  */
-module.exports = function (objectrepository) {
-    return function (req, res, next) {
-        res.locals.biralok=[
-            {
-                _biraloid:'1',
-                nev: 'Kis Bela',
-                neptun:'HUBX7D',
-                telszam:'0630',
-                email: 'kisbela@'
-            },
-            {
-                _biraloid:'2',
-                nev: 'Nagy Bela',
-                neptun:'HOBX7D',
-                telszam:'0620',
-                email: 'nagybela@'
+
+const requireOption = require('../requireOption');
+
+module.exports = function(objectrepository) {
+    const biraloModel = requireOption(objectrepository, 'biraloModel');
+
+    return function(req, res, next) {
+        biraloModel.find({}, (err, biralok) => {
+            if (err) {
+                return next(err);
             }
-        ];
-        next();
+
+            res.locals.biralok = biralok;
+            return next();
+        });
     };
 };

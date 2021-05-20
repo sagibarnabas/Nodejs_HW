@@ -6,24 +6,16 @@ Neptun Kód: HUBX7D<br>
 Telefonszám: +3630999999<br>
 Email cím: kis@bela.hu<br>
 
-<a href="/biralo/:biraloid/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a>
 
-<h3>Elbírált pályázatok</h3>
+<h3>Pályázatok</h3>
 
 <div class="container overflow-hidden">
     <div class="row gy-5">
+        <%palyazatok.forEach(function(egypalyazat){ %>
         <div class="col-6">
-            <div class="p-3 border bg-light">Sági Barnabás-HUBX6D<br>32 pont<br>Előbírált hiányos<br><a href="/palyazat/:palyazatid/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a><a href="/profil.html" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a></div>
+            <div class="p-3 border bg-light"><%=egypalyazat.nev%>-<%=egypalyazat.neptun%><br><%=egypalyazat.pontszam%> pont<br><%=egypalyazat.statusz%><br><a href="/palyazat/<%=egypalyazat._id%>/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a><a href="/palyazat/<%=egypalyazat._id%>/delete" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a></div>
         </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">Kis Béla-HUBX3D<br>15 pont<br>Végleges lezárásra vár<br><a href="/palyazat/:palyazatid/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a><a href="/profil.html" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a></div>
-        </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">József Géza-HUBX4D<br>0 pont<br>Véglegesen lezárt, hiánytalan<br><a href="/palyazat/:palyazatid/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a><a href="/profil.html" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a></div>
-        </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">Nagy Dénes-HUBX5D<br>2 pont<br>Előbírált hiánytalan<br><a href="/palyazat/:palyazatid/edit" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a><a href="/profil.html" class="btn btn-sm btn-danger"><i class="fas fa-user-minus"></i></a></div>
-        </div>
+        <% }); %>
     </div>
 </div>
 

@@ -5,6 +5,7 @@ const palyazat = db.model('palyazat', {
     nev: String,
     email: String,
     neptun: String,
+    telefon: String,
     pontszam: String,
     mirepalyazik: String,
     statusz: String,

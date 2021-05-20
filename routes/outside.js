@@ -1,34 +1,35 @@
-var authMW = require('../middleware/auth/auth');
-var logoutMW = require('../middleware/auth/logout');
-var checkpswMW = require('../middleware/auth/checkpsw');
-var renderMW = require('../middleware/auth/render');
-var sendmepwMW = require('../middleware/auth/sendmepw');
+const authMW = require('../middleware/auth/auth');
+const logoutMW = require('../middleware/auth/logout');
+const checkpswMW = require('../middleware/auth/checkpsw');
+const renderMW = require('../middleware/auth/render');
+const sendmepwMW = require('../middleware/auth/sendmepw');
 
-var getbiralokMW = require('../middleware/biralo/getbiralok');
-var getbiraloMW = require('../middleware/biralo/getbiralo');
-var savebiraloMW = require('../middleware/biralo/savebiralo');
-var deletebiraloMW = require('../middleware/biralo/deletebiralo');
+const getbiralokMW = require('../middleware/biralo/getbiralok');
+const getbiraloMW = require('../middleware/biralo/getbiralo');
+const savebiraloMW = require('../middleware/biralo/savebiralo');
+const deletebiraloMW = require('../middleware/biralo/deletebiralo');
 
-var getpalyazatokMW = require('../middleware/palyazat/getpalyazatok');
-var getpalyazatMW = require('../middleware/palyazat/getpalyazat');
-var savepalyazatMW = require('../middleware/palyazat/savepalyazat');
-var deletepalyazatMW = require('../middleware/palyazat/deletepalyazat');
+const getpalyazatokMW = require('../middleware/palyazat/getpalyazatok');
+const getpalyazatMW = require('../middleware/palyazat/getpalyazat');
+const savepalyazatMW = require('../middleware/palyazat/savepalyazat');
+const deletepalyazatMW = require('../middleware/palyazat/deletepalyazat');
 
+
+const biraloModel = require('../models/biralo');
+const palyazatModel = require('../models/palyazat');
 
 module.exports = function (app) {
-    var objectRepository = {};
+    const objectRepository = {
+        biraloModel:biraloModel,
+        palyazatModel:palyazatModel
+    };
 
-
-    app.get('/',
-        authMW(objectRepository),
-        renderMW(objectRepository,'index')
-    );
     app.use('/login',
         getbiraloMW(objectRepository),
         checkpswMW(objectRepository),
         renderMW(objectRepository, 'login')
     );
-    app.use('/sendpw/:biraloid',
+    app.use('/sendpw',
         getbiraloMW(objectRepository),
         sendmepwMW(objectRepository),
         renderMW(objectRepository, 'login')
@@ -51,7 +52,7 @@ module.exports = function (app) {
     );
     app.get('/biralo/:biraloid/delete',
         authMW(objectRepository),
-        savebiraloMW(objectRepository),
+        getbiraloMW(objectRepository),
         deletebiraloMW(objectRepository)
     );
     app.get('/palyazatok',
@@ -66,8 +67,8 @@ module.exports = function (app) {
     );
     app.use('/palyazat/:palyazatid/edit',
         authMW(objectRepository),
-        getpalyazatMW(),
-        getpalyazatokMW(objectRepository),
+        getpalyazatMW(objectRepository),
+        savepalyazatMW(objectRepository),
         renderMW(objectRepository, 'palyazatmodosit')
     );
     app.get('/palyazat/:palyazatid/delete',
@@ -75,14 +76,18 @@ module.exports = function (app) {
         getpalyazatMW(objectRepository),
         deletepalyazatMW(objectRepository),
     );
-    app.get('/logout',
-        authMW(objectRepository),
-        logoutMW(objectRepository),
-        renderMW(objectRepository, 'profil')
-    )
-    app.get('/profil/:biraloid',
+    app.get('/profil',
         authMW(objectRepository),
         getbiraloMW(objectRepository),
+        getpalyazatokMW(objectRepository),
         renderMW(objectRepository, 'profil')
     )
+    app.use('/logout',
+        logoutMW(objectRepository))
+
+    app.get('/',
+        authMW(objectRepository),
+        getpalyazatokMW(objectRepository),
+        renderMW(objectRepository,'index')
+    );
 };

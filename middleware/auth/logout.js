@@ -1,10 +1,13 @@
 /**
- * Kijelentkezteti a felhasználót, majd a login oldalra irányít /
+ * Kijelentkezik /
  */
-module.exports = function (objectrepository) {
 
-    return function (req, res, next) {
-        return next();
+const requireOption = require('../requireOption');
+
+module.exports = function(objectrepository) {
+    return function(req, res, next) {
+        req.session.destroy(err => {
+            res.redirect('/');
+        });
     };
-
 };

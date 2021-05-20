@@ -5,40 +5,28 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
-            <form>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="nev" class="col-form-label">Név:</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="text" id="nev" class="form-control" aria-describedby="passwordHelpInline">
-                    </div>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="nev">Név</label>
+                    <input type="text" class="form-control" id="nev" name="nev"
+                           value="<%= (typeof biralo === 'undefined') ? '' : biralo.nev %>">
                 </div>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="neptun" class="col-form-label">Neptun kód:</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="text" id="neptun" class="form-control" aria-describedby="passwordHelpInline">
-                    </div>
+                <div class="form-group">
+                    <label for="email">Email-cim</label>
+                    <input type="text" class="form-control" id="email" name="email"
+                           value="<%= (typeof biralo === 'undefined') ? '' : biralo.email %>">
                 </div>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="tel" class="col-form-label">Telefonszám:</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="text" id="tel" class="form-control" aria-describedby="passwordHelpInline">
-                    </div>
+                <div class="form-group">
+                    <label for="neptun">Neptun</label>
+                    <input type="text" class="form-control" id="neptun" name="neptun"
+                           value="<%= (typeof biralo === 'undefined') ? '' : biralo.neptun %>">
                 </div>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="email" class="col-form-label">Email cím:</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="email" id="email" class="form-control" aria-describedby="passwordHelpInline">
-                    </div>
-                    <a href="/profil/:biraloid" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i>Mentés</a>
+                <div class="form-group">
+                    <label for="telefon">Telefonszám</label>
+                    <input type="text" class="form-control" id="telefon" name="telefon" value="<%= (typeof biralo === 'undefined') ? '' : biralo.telefon %>">
                 </div>
+                <input type="submit" class="btn btn-primary" value="Mentés"/>
+                <a class="btn btn-link" href="/biralok">Mégsem</a>
             </form>
         </div>
         <div class="col-lg-4 col-md-6 col-12">
